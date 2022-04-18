@@ -14,8 +14,9 @@ public class SfgPetClinicApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgPetClinicApplication.class, args);
 		MyController mycontroller = (MyController) ctx.getBean("myController");
-		String greeting = mycontroller.sayHello();
-		System.out.println(greeting);
+
+		System.out.println("----- Primary  ---");
+		System.out.println(mycontroller.sayHello());
 
 		System.out.println("----- Property ---");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
