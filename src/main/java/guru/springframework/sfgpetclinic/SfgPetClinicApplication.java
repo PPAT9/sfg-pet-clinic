@@ -3,7 +3,7 @@ package guru.springframework.sfgpetclinic;
 import guru.springframework.sfgpetclinic.controllers.ConstructorController;
 import guru.springframework.sfgpetclinic.controllers.MyController;
 import guru.springframework.sfgpetclinic.controllers.PropertyInjectedController;
-import guru.springframework.sfgpetclinic.controllers.SetterInjectionController;
+import guru.springframework.sfgpetclinic.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -22,8 +22,8 @@ public class SfgPetClinicApplication {
 		System.out.println(propertyInjectedController.getGreeting());
 
 		System.out.println("------ Setter -------");
-		SetterInjectionController setterInjectionController = (SetterInjectionController) ctx.getBean("setterInjectionController");
-		System.out.println(setterInjectionController.getGreeting());
+		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
+		System.out.println(setterInjectedController.getGreeting());
 
 		System.out.println("----ConstructorController-----");
 		ConstructorController constructorController = (ConstructorController) ctx.getBean("constructorController");

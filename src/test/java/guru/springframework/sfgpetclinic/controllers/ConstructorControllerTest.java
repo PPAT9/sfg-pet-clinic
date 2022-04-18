@@ -1,6 +1,6 @@
 package guru.springframework.sfgpetclinic.controllers;
 
-import guru.springframework.sfgpetclinic.services.GreetingServiceImpl;
+import guru.springframework.sfgpetclinic.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ class ConstructorControllerTest {
 
     @BeforeEach
     void setUp() {
-        controller = new ConstructorController(new GreetingServiceImpl());
+        controller = new ConstructorController(new ConstructorGreetingService());
     }
 
     @Test

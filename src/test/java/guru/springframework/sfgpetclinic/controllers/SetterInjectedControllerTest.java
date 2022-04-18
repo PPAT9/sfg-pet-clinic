@@ -4,13 +4,14 @@ import guru.springframework.sfgpetclinic.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class PropertyInjectedControllerTest {
-    PropertyInjectedController controller;
+class SetterInjectedControllerTest {
+
+    SetterInjectedController controller;
 
     @BeforeEach
     void setUp() {
-        controller = new PropertyInjectedController();
-        controller.greetingService = new ConstructorGreetingService();
+        controller = new SetterInjectedController();
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
